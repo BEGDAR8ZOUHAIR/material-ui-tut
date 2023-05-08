@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { purple } from '@material-ui/core/colors'
 import Layout from './components/Layout'
-import CreateTable from './pages/CreateTable' 
+import Forms from './pages/Forms'
 
 const theme = createMuiTheme({
   palette: {
@@ -28,8 +28,8 @@ function App() {
           <Switch>
             <Route exact path="/">
             </Route>
-            <Route path="/">
-              <CreateTable />
+            <Route path="/LinerStepper">
+              <Forms />
             </Route>
           </Switch>
         </Layout>

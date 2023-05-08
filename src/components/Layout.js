@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => {
     },
     date: {
       flexGrow: 1
+      
     },
     toolbar: theme.mixins.toolbar,
     avatar: {
@@ -58,15 +59,17 @@ export default function Layout({ children }) {
 
   const menuItems = [
     { 
-      text: 'My Tables', 
+      text: 'My Forms', 
       icon: <TableChartTwoTone color="secondary" />, 
-      path: '/Create' 
+      path: '/' 
     },
     { 
-      text: 'Create Table', 
+      text: 'Liner Stepper', 
       icon: <AddCircleOutlineOutlined color="secondary" />, 
-      path: '/CreateTable' 
+      path: '/LinerStepper' 
     },
+ 
+  
   ];
 
   return (
@@ -82,7 +85,7 @@ export default function Layout({ children }) {
           <Typography className={classes.date}>
             Today is the {format(new Date(), 'do MMMM Y')}
           </Typography>
-          <Typography>Mario</Typography>
+          <Typography> sposored by Maryem </Typography>
           <Avatar className={classes.avatar} src="/mario-av.png" />
         </Toolbar>
       </AppBar>
@@ -96,7 +99,7 @@ export default function Layout({ children }) {
       >
         <div>
           <Typography variant="h5" className={classes.title}>
-            Sanlam Maroc
+            Corporate Squad
           </Typography>
         </div>
 
