@@ -59,15 +59,21 @@ export default function Layout({ children }) {
 
   const menuItems = [
     { 
-      text: 'My Forms', 
+      text: 'Fromik Forms', 
       icon: <TableChartTwoTone color="secondary" />, 
-      path: '/' 
+      path: '/loginFormik' 
     },
     { 
       text: 'Liner Stepper', 
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/LinerStepper' 
     },
+    {
+      text: 'Original Form',
+      icon: <AddCircleOutlineOutlined color="secondary" />,
+      path: '/OriginalForm'
+    }
+    
  
   
   ];

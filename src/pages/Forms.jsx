@@ -1,6 +1,5 @@
 
 
-
 import React, { useState } from "react";
 import
     {
@@ -18,13 +17,25 @@ import
         Controller,
         FormProvider,
         useFormContext,
-    } from "react-hook-form";
+} from "react-hook-form";
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
     button: {
         marginRight: theme.spacing(1),
     },
 }));
+
+
+
+
+
+
+
+
 
 function getSteps()
 {
@@ -111,12 +122,16 @@ const ContactForm = () =>
             <Controller
                 control={control}
                 name="emailAddress"
+                rules={{ required: "this field is required." }}
+
                 render={({ field }) => (
                     <TextField
                         id="email"
                         label="E-mail"
                         variant="outlined"
                         placeholder="Enter Your E-mail Address"
+                        // validation email
+                        type="email"
                         fullWidth
                         margin="normal"
                         {...field}
@@ -127,6 +142,9 @@ const ContactForm = () =>
             <Controller
                 control={control}
                 name="phoneNumber"
+
+            
+
                 render={({ field }) => (
                     <TextField
                         id="phone-number"
@@ -148,6 +166,8 @@ const ContactForm = () =>
                         label="Alternate Phone"
                         variant="outlined"
                         placeholder="Enter Your Alternate Phone"
+                        // validation phone number
+                      
                         fullWidth
                         margin="normal"
                         {...field}
@@ -157,6 +177,7 @@ const ContactForm = () =>
         </>
     );
 };
+
 const PersonalForm = () =>
 {
     const { control } = useFormContext();
@@ -210,6 +231,7 @@ const PersonalForm = () =>
         </>
     );
 };
+
 const PaymentForm = () =>
 {
     const { control } = useFormContext();
@@ -264,6 +286,7 @@ const PaymentForm = () =>
     );
 };
 
+
 function getStepContent(step)
 {
     switch (step)
@@ -282,10 +305,14 @@ function getStepContent(step)
     }
 }
 
+
+
+
 const Forms = () =>
 {
     const classes = useStyles();
     const methods = useForm({
+        // default values 
         defaultValues: {
             firstName: "",
             lastName: "",
@@ -311,31 +338,19 @@ const Forms = () =>
     const isStepFalied = () =>
     {
         return Boolean(Object.keys(methods.formState.errors).length);
+
     };
     const isStepSkipped = (step) =>
     {
         return skippedSteps.includes(step);
+        
     };
 
     const handleNext = (data) =>
     {
         console.log(data);
-        if (activeStep == steps.length - 1)
-        {
-            fetch("https://jsonplaceholder.typicode.com/comments")
-                .then((data) => data.json())
-                .then((res) =>
-                {
-                    console.log(res);
-                    setActiveStep(activeStep + 1);
-                });
-        } else
-        {
-            setActiveStep(activeStep + 1);
-            setSkippedSteps(
-                skippedSteps.filter((skipItem) => skipItem !== activeStep)
-            );
-        }
+        setActiveStep(activeStep + 1);
+
     };
 
     const handleBack = () =>
@@ -352,9 +367,7 @@ const Forms = () =>
         setActiveStep(activeStep + 1);
     };
 
-    // const onSubmit = (data) => {
-    //   console.log(data);
-    // };
+
     return (
         <div>
             <Stepper alternativeLabel activeStep={activeStep}>
@@ -421,7 +434,6 @@ const Forms = () =>
                                 className={classes.button}
                                 variant="contained"
                                 color="primary"
-                                // onClick={handleNext}
                                 type="submit"
                             >
                                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
