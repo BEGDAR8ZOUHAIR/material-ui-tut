@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import
     {
@@ -19,22 +18,11 @@ import
         useFormContext,
 } from "react-hook-form";
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
     button: {
         marginRight: theme.spacing(1),
     },
 }));
-
-
-
-
-
-
-
 
 
 function getSteps()
@@ -445,6 +433,5 @@ const Forms = () =>
         </div>
     );
 };
-
 export default Forms;
 

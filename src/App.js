@@ -27,17 +27,11 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route path="/">
-              
-
-              jfjfjfjf
-            </Route>
+         
             <Route path="/LinerStepper">
               <Forms />
             </Route>
-            <Route path="/">
-            </Route>
-            
+       
           </Switch>
         </Layout>
       </Router>
