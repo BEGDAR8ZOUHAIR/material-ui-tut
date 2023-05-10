@@ -21,25 +21,25 @@ const theme = createMuiTheme({
   }
 })
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route  path="/">
-            </Route>
-            <Route path="/LinerStepper">
-              <Forms />
-            </Route>
-            <Route path="/">
-            </Route>
+// function App() {
+//   return (
+//     <ThemeProvider theme={theme}>
+//       <Router>
+//         <Layout>
+//           <Switch>
+//             <Route  path="/">
+//             </Route>
+//             <Route path="/LinerStepper">
+//               <Forms />
+//             </Route>
+//             <Route path="/">
+//             </Route>
             
-          </Switch>
-        </Layout>
-      </Router>
-    </ThemeProvider>
-  );
-}
+//           </Switch>
+//         </Layout>
+//       </Router>
+//     </ThemeProvider>
+//   );
+// }
 
 export default App;
