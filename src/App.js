@@ -3,8 +3,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { purple } from '@material-ui/core/colors'
 import Layout from './components/Layout'
 import Forms from './pages/Forms'
-import Formik from './pages/loginFormik'
-import OriginalForm from './pages/OriginalForm'
+
 
 const theme = createMuiTheme({
   palette: {
@@ -28,14 +27,12 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route  path="/loginFormik">
-              <Formik />
+            <Route  path="/">
             </Route>
             <Route path="/LinerStepper">
               <Forms />
             </Route>
-            <Route path="/OriginalForm">
-              <OriginalForm />
+            <Route path="/">
             </Route>
             
           </Switch>
