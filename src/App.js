@@ -27,11 +27,9 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-         
             <Route path="/LinerStepper">
               <Forms />
             </Route>
-       
           </Switch>
         </Layout>
       </Router>
