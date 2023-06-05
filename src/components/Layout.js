@@ -64,10 +64,6 @@ export default function Layout({ children }) {
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/LinerStepper' 
     },
-   
-    
- 
-  
   ];
 
   return (
@@ -87,7 +83,6 @@ export default function Layout({ children }) {
           <Avatar className={classes.avatar} src="/mario-av.png" />
         </Toolbar>
       </AppBar>
-
       {/* side drawer */}
       <Drawer
         className={classes.drawer}
@@ -114,10 +109,8 @@ export default function Layout({ children }) {
               <ListItemText primary={item.text} />
             </ListItem>
           ))}
-        </List>
-        
+        </List>  
       </Drawer>
-
       {/* main content */}
       <div className={classes.page}>
         <div className={classes.toolbar}></div>
