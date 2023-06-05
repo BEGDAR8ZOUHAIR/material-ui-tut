@@ -30,7 +30,7 @@
     "react-hook-form": "^7.43.9",
     "react-masonry-css": "^1.0.14",
     "react-phone-number-input": "^3.2.22",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.0.0-rc.1",
     "web-vitals": "^1.1.0",
